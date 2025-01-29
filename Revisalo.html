@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi Poti💖</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #ffe6f2;
+            padding: 50px;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #ff4d79;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+        .question {
+            font-size: 24px;
+            color: #ff4d79;
+            margin-top: 30px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+        .heart {
+            font-size: 50px;
+            color: #ff4d79;
+            animation: pulse 1s infinite;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .reveal-btn {
+            background-color: #ff4d79;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .reveal-btn:hover {
+            background-color: #ff3366;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌸 ¡Hola Poti! 🌸</h1>
+        
+        <p id="mensaje1">Quería decirte algo especial...</p>
+        <p id="mensaje2">La verdad, nunca pensé que iba a estar tratando de aplicar todo lo que sé de programación para esto jajaja... (pero vale la pena). Esto es un pequeño detalle para que sepas lo mucho que te quiero y que eres alguien especial para mí. Quiero hacer las cosas bien contigo ❤️🫶🏼, por lo mismo... Quiero preguntarte:</p>
+        <p class="question" id="pregunta">¿Puedo ser tu San Valentín? 💕</p>
+        <div class="heart" id="corazon">❤️</div>
+
+        <button class="reveal-btn" onclick="mostrarMensaje()">Ver Sorpresa</button>
+    </div>
+
+    <script>
+        function mostrarMensaje() {
+            document.getElementById("mensaje1").style.opacity = "1";
+            setTimeout(() => document.getElementById("mensaje2").style.opacity = "1", 1000);
+            setTimeout(() => document.getElementById("pregunta").style.opacity = "1", 2000);
+            setTimeout(() => document.getElementById("corazon").style.opacity = "1", 3000);
+        }
+    </script>
+</body>
+</html>
